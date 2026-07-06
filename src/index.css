@@ -1,0 +1,180 @@
+@import url("https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&family=Architects+Daughter&family=Permanent+Marker&family=Gaegu:wght@400;700&family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=swap");
+@import "tailwindcss";
+@theme {
+  --font-display-lg: "Permanent Marker", "Inter", sans-serif;
+  --font-headline-md: "Architects Daughter", "Inter", sans-serif;
+  --font-headline-sm: "Architects Daughter", "Inter", sans-serif;
+  --font-label-code: "Gaegu", monospace;
+  --font-body-md: "Caveat", cursive, sans-serif;
+  --font-body-lg: "Caveat", cursive, sans-serif;
+  --font-script-font: "Caveat", cursive, sans-serif;
+}
+
+/* Material symbols styles */
+.material-symbols-outlined {
+  font-family: "Material Symbols Outlined";
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  -webkit-font-smoothing: antialiased;
+  font-variation-settings:
+    "FILL" 0,
+    "wght" 400,
+    "GRAD" 0,
+    "opsz" 24;
+}
+
+/* Scrapbook Layout and Effects */
+.grid-paper {
+  background-color: #fcfcfc;
+  background-image:
+    linear-gradient(#e5e7eb 1px, transparent 1px),
+    linear-gradient(90deg, #e5e7eb 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+.sketchy-border {
+  border: 2px solid #000000;
+  border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+  position: relative;
+}
+
+.sketchy-border::before {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  border-radius: 20px 255px 30px 225px/225px 30px 255px 20px;
+  pointer-events: none;
+}
+
+.sketchy-card-shadow {
+  box-shadow: 6px 6px 0px 0px rgba(0, 0, 0, 0.8);
+}
+
+.highlighter-cyan {
+  background-color: rgba(125, 244, 255, 0.6);
+  clip-path: polygon(0% 15%, 100% 0%, 98% 85%, 2% 100%);
+}
+
+.highlighter-yellow {
+  background-color: rgba(223, 233, 0, 0.6);
+  clip-path: polygon(2% 0%, 98% 5%, 100% 95%, 0% 100%);
+}
+
+.highlighter-pink {
+  background-color: rgba(255, 182, 193, 0.6);
+  clip-path: polygon(1% 8%, 99% 1%, 95% 92%, 4% 97%);
+}
+
+.washi-tape {
+  position: absolute;
+  width: 80px;
+  height: 24px;
+  background: rgba(223, 233, 0, 0.4);
+  transform: rotate(-15deg);
+  z-index: 20;
+  top: -12px;
+  left: 50%;
+  margin-left: -40px;
+  border-left: 3px dotted rgba(0, 0, 0, 0.15);
+  border-right: 3px dotted rgba(0, 0, 0, 0.15);
+}
+
+.washi-tape-blue {
+  position: absolute;
+  width: 80px;
+  height: 24px;
+  background: rgba(125, 244, 255, 0.4);
+  transform: rotate(10deg);
+  z-index: 20;
+  border-left: 3px dotted rgba(0, 0, 0, 0.15);
+  border-right: 3px dotted rgba(0, 0, 0, 0.15);
+}
+
+.hand-drawn-underline {
+  position: relative;
+  display: inline-block;
+}
+
+.hand-drawn-underline::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: currentColor;
+  border-radius: 100% 0% 100% 0% / 100% 0% 100% 0%;
+  opacity: 0.7;
+}
+
+.doodle-circle {
+  position: relative;
+}
+
+.doodle-circle::before {
+  content: "";
+  position: absolute;
+  top: -4px;
+  left: -4px;
+  right: -4px;
+  bottom: -4px;
+  border: 2px solid #000;
+  border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
+  transform: rotate(-2deg);
+  pointer-events: none;
+}
+
+.timeline-line {
+  background-image: repeating-linear-gradient(
+    0deg,
+    #000,
+    #000 8px,
+    transparent 8px,
+    transparent 16px
+  );
+  width: 3px;
+}
+
+.ink-stain {
+  position: fixed;
+  width: 100px;
+  height: 100px;
+  background: radial-gradient(circle, rgba(0, 0, 0, 0.04) 0%, transparent 70%);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.paper-texture {
+  background-image: url("https://www.transparenttextures.com/patterns/felt.png");
+}
+
+.script-font {
+  font-family: "Caveat", cursive;
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-5px) rotate(2deg);
+  }
+}
+
+.float-animation {
+  animation: float 4s ease-in-out infinite;
+}
