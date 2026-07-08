@@ -15,17 +15,45 @@ export default function StackTab() {
     {
       title: "🎨 Frontend Techs",
       colorClass: "bg-blue-50/40",
-      skills: ["React.js", "Tailwind CSS", "Vite", "HTML5 & CSS3"],
+      skills: [
+        "React.js",
+        "Redux",
+        "Material UI",
+        "JavaScript",
+        "HTML5",
+        "CSS3",
+        "Formik",
+        "Responsive Design",
+        "REST API Integration",
+        "Vite",
+      ],
     },
     {
       title: "⚙️ Backend Engines",
       colorClass: "bg-red-50/40",
       skills: [
         "ASP.NET Core",
-        ".NET 8",
+        ".NET 6 / .NET 8",
         "C#",
+        "REST APIs",
         "Microservices",
         "Ocelot API Gateway",
+        "Dapper",
+      ],
+    },
+    {
+      title: "🔒 Security & Authentication",
+      colorClass: "bg-emerald-50/40",
+      skills: [
+        "RSA Encryption",
+        "JWT Authentication",
+        "Authentication",
+        "Authorization",
+        "Role-Based Access Control (RBAC)",
+        "API Security",
+        "Secure REST APIs",
+        "KYC & User Onboarding",
+        "External API Integration",
       ],
     },
     {
@@ -33,19 +61,43 @@ export default function StackTab() {
       colorClass: "bg-amber-50/40",
       skills: [
         "SQL Server",
-        "Azure SQL",
         "PostgreSQL",
-        "Entity Framework Core",
+        "Azure SQL",
+        "Database Design",
+        "Query Optimization",
+        "Stored Procedures",
       ],
     },
     {
-      title: "☁️ Clouds & Helpers",
+      title: "☁️ Cloud & DevOps",
       colorClass: "bg-purple-50/40",
       skills: [
-        "Docker",
         "Microsoft Azure",
+        "Azure App Service",
+        "Azure Storage",
+        "Azure API Gateway",
+        "Azure Container Registry",
+        "Azure Container Instances",
+        "Docker",
+        "Containerization",
+        "GitHub Actions",
+        "Vercel",
+        "Resend",
+      ],
+    },
+    {
+      title: "🤖 AI & Productivity",
+      colorClass: "bg-pink-50/40",
+      skills: [
+        "ChatGPT",
+        "Claude",
         "GitHub Copilot",
-        "CI/CD Pipelines",
+        "NotebookLM",
+        "JuliusAI",
+        "Google Stitch",
+        "Google AI Studio",
+        "Comet",
+        "AI-Assisted Development",
       ],
     },
   ];
@@ -145,8 +197,7 @@ export default function StackTab() {
             </p>
 
             <div className="bg-white/50 p-3 rounded border border-black/10 font-label-code text-sm text-gray-600">
-              ⚡ Used inside production products: <strong>Bank In A Box</strong>
-              , <strong>CaMS</strong>, and <strong>HaTS</strong>.
+              ⚡ Used inside production products.
             </div>
 
             <button
