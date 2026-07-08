@@ -129,7 +129,7 @@ export default function StackTab() {
         <p className="font-body-md text-lg text-center text-gray-600 max-w-xl mx-auto">
           These are the primary building blocks of my enterprise web
           applications. Click any sticker below to see how I apply it in
-          production!
+          production! (Psst! Scroll down for a sticky note with skill details!)
         </p>
       </div>
 
