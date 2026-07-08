@@ -61,7 +61,7 @@ export default function HireMeModal({ isOpen, onClose }: HireMeModalProps) {
         <div className="space-y-4 font-body-md text-xl text-gray-800 leading-tight">
           <p>
             Sirisha Boya is a Senior Full-Stack Developer with{" "}
-            <strong>5.7 years of experience</strong> across enterprise
+            <strong>4+ years of experience</strong> across enterprise
             healthcare, banking, procurement, and asset systems.
           </p>
 

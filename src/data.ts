@@ -413,6 +413,36 @@ export const SKILL_DETAILS: SkillDetail[] = [
   },
 ];
 
+export const PRIMARY_SKILLS: SkillDetail[] = [
+  {
+    name: "React.js",
+    level: "4+ Years",
+    description:
+      "Built enterprise-scale React applications using Hooks, reusable components, routing, state management, API integration, and responsive UI development.",
+    icon: "code",
+  },
+  {
+    name: ".NET 6 / .NET 8",
+    level: "Advanced",
+    description:
+      "Built scalable Web APIs and modernized enterprise applications using .NET 6 and .NET 8 with a focus on performance, maintainability, and cloud readiness.",
+    icon: "bolt",
+  },
+  {
+    name: "SQL Server",
+    level: "4+ Years",
+    description:
+      "Designed and managed SQL Server databases, developed stored procedures, optimized queries, created indexes, and maintained enterprise data for high-performance applications.",
+    icon: "database",
+  },
+  {
+    name: "Microsoft Azure",
+    level: "Advanced",
+    description:
+      "Deployed and managed enterprise applications on Microsoft Azure using App Services, Azure SQL, Storage, API Gateway, and container-based cloud infrastructure.",
+    icon: "cloud",
+  },
+];
 export const PROJECTS: Project[] = [
   {
     title: "Bank In A Box",

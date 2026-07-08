@@ -4,7 +4,7 @@
  */
 
 import React, { useState } from "react";
-import { EXPERIENCES, SKILL_DETAILS, PROJECTS } from "../data";
+import { EXPERIENCES, SKILL_DETAILS, PROJECTS, PRIMARY_SKILLS } from "../data";
 import { SkillDetail } from "../types";
 import { motion, AnimatePresence } from "motion/react";
 const profile = "/assets/portfolio-image.PNG";
@@ -30,6 +30,9 @@ export default function HomeTab({
       } else {
         setSelectedSkill(detail);
       }
+    } else if (skillName === "More") {
+      // Handle "More" button click, e.g., navigate to a detailed skills page or show a modal
+      onNavigateToTab("stack");
     }
   };
 
@@ -135,13 +138,13 @@ export default function HomeTab({
               </span>
               <span className="hand-drawn-underline">The Backstory</span>
             </h2>
-            <p className="font-body-lg text-3xl text-gray-800 mb-6 leading-relaxed">
+            <p className="font-body-lg text-2xl text-gray-800 mb-6 leading-relaxed">
               React/.NET Full Stack Developer with 4+ years of experience
               designing, developing, deploying and supporting enterprise
               applications across Banking, Healthcare, HRMS, Procurement and
               Asset Management domains.
             </p>
-            <p className="font-body-md text-2xl text-gray-700 mb-6 leading-relaxed">
+            <p className="font-body-md text-xl text-gray-700 mb-6 leading-relaxed">
               Experienced in end-to-end feature ownership using React.js,
               ASP.NET Core, C#, SQL Server, PostgreSQL, Microservices, Docker
               and cloud technologies like Azure, vercel, and resend. Strong in
@@ -220,7 +223,7 @@ export default function HomeTab({
             </p>
 
             <div className="flex flex-wrap gap-3 mb-4">
-              {SKILL_DETAILS.map((skill, idx) => (
+              {PRIMARY_SKILLS.map((skill, idx) => (
                 <button
                   key={idx}
                   onClick={() => handleSkillClick(skill.name)}
@@ -229,6 +232,12 @@ export default function HomeTab({
                   <span className="relative z-10">{skill.name}</span>
                 </button>
               ))}
+              <button
+                onClick={() => handleSkillClick("More")}
+                className={`px-4 py-1.5 border-2 border-black rounded-full font-label-code text-lg cursor-pointer transition-all duration-200 outline-none select-none hover:bg-neutral-100 ${selectedSkill?.name === "More" ? "bg-cyan-100 ring-2 ring-black" : ""}`}
+              >
+                <span className="relative z-10">More...</span>
+              </button>
             </div>
 
             {/* Interactive Doodled Detail Box */}
