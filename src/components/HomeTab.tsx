@@ -7,6 +7,7 @@ import React, { useState } from "react";
 import { EXPERIENCES, SKILL_DETAILS, PROJECTS } from "../data";
 import { SkillDetail } from "../types";
 import { motion, AnimatePresence } from "motion/react";
+const profile = "/assets/portfolio-image.PNG";
 
 interface HomeTabProps {
   onNavigateToTab: (tab: string) => void;
@@ -48,7 +49,7 @@ export default function HomeTab({
             <img
               alt="Sirisha Boya Portrait"
               className="w-56 h-56 md:w-72 md:h-72 object-cover grayscale contrast-125"
-              src="https://lh3.googleusercontent.com/aida/AP1WRLsrR2_wRHHYenhLK2tjQnECsvU7JTQucRt-X2bksCOwTHFyFwRLN11vI5mo9J9xvChXJWFsDOT4UOwlP6_pRAIkzSTB1XZLlncXmzoZ1kJBAePE-HTCJ0rCgs7TVw-r8cSr_4ivWaKP53iTABWIKxdEML1O17kYPvCkYxPFbNkAz0A5IaoCZ0KewFgnqjoI58rELEIw5RAMxCWaCVjHexrPZcQnj-20PjW607Ww8u-Lh7to580Kwh3Yzw"
+              src={profile}
               referrerPolicy="no-referrer"
             />
           </div>
@@ -72,7 +73,7 @@ export default function HomeTab({
               Microservices
             </span>
             <span className="hand-drawn-underline cursor-pointer hover:text-black">
-              Azure
+              Cloud
             </span>
             <span className="hand-drawn-underline cursor-pointer hover:text-black">
               REST APIs
@@ -134,18 +135,19 @@ export default function HomeTab({
               </span>
               <span className="hand-drawn-underline">The Backstory</span>
             </h2>
-            <p className="font-body-lg text-2xl text-gray-800 mb-6 leading-relaxed">
-              React/.NET Full Stack Developer with 5.7 years of experience
+            <p className="font-body-lg text-3xl text-gray-800 mb-6 leading-relaxed">
+              React/.NET Full Stack Developer with 4+ years of experience
               designing, developing, deploying and supporting enterprise
               applications across Banking, Healthcare, HRMS, Procurement and
               Asset Management domains.
             </p>
-            <p className="font-body-md text-xl text-gray-700 mb-6 leading-relaxed">
+            <p className="font-body-md text-2xl text-gray-700 mb-6 leading-relaxed">
               Experienced in end-to-end feature ownership using React.js,
               ASP.NET Core, C#, SQL Server, PostgreSQL, Microservices, Docker
-              and Microsoft Azure. Strong in API design, authentication, cloud
-              deployments, production support, mentoring junior developers and
-              collaborating with cross-functional teams.
+              and cloud technologies like Azure, vercel, and resend. Strong in
+              API design, authentication, cloud deployments, production support,
+              mentoring junior developers and collaborating with
+              cross-functional teams.
             </p>
             <div className="highlighter-yellow p-6 border-l-8 border-black rotate-1 text-black">
               <p className="font-label-code text-lg">
@@ -212,7 +214,7 @@ export default function HomeTab({
             <h2 className="font-headline-md text-3xl mb-4 text-black">
               Skill Doodles
             </h2>
-            <p className="font-body-md text-lg text-gray-600 mb-6">
+            <p className="font-body-md text-xl text-gray-700 mb-6">
               Click a skill to check Sirisha's doodle detail and deployment
               usage:
             </p>

@@ -8,7 +8,7 @@ export interface Experience {
   period: string;
   company: string;
   bullets: string[];
-  color: 'cyan' | 'yellow';
+  color: "cyan" | "yellow" | "green";
 }
 
 export interface SkillDetail {
@@ -33,6 +33,6 @@ export interface GuestbookEntry {
   id: string;
   name: string;
   message: string;
-  color: 'yellow' | 'cyan' | 'pink';
+  color: "yellow" | "cyan" | "pink";
   timestamp: string;
 }

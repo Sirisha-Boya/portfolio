@@ -3,8 +3,8 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-import React from 'react';
-import { motion } from 'motion/react';
+import React from "react";
+import { motion } from "motion/react";
 
 interface HireMeModalProps {
   isOpen: boolean;
@@ -15,8 +15,12 @@ export default function HireMeModal({ isOpen, onClose }: HireMeModalProps) {
   if (!isOpen) return null;
 
   const handleDownloadResume = () => {
-    // Generate a simple print layout of her portfolio resume, or trigger window.print() for her Resume!
-    window.print();
+    const link = document.createElement("a");
+    link.href = "/resume/Sirisha_Resume.pdf";
+    link.download = "Sirisha_Resume.pdf";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
   };
 
   return (
@@ -41,31 +45,51 @@ export default function HireMeModal({ isOpen, onClose }: HireMeModalProps) {
 
         <div className="text-center mt-4">
           <div className="w-16 h-16 bg-white border-2 border-black rounded-full flex items-center justify-center mx-auto mb-4 sketchy-border">
-            <span className="material-symbols-outlined text-3xl text-yellow-600 animate-bounce">handshake</span>
+            <span className="material-symbols-outlined text-3xl text-yellow-600 animate-bounce">
+              handshake
+            </span>
           </div>
 
-          <h2 className="font-display-lg text-4xl text-black mb-2 select-none">Hire Sirisha!</h2>
-          <p className="font-headline-sm text-xl text-cyan-800 mb-6 italic">Let's build something awesome!</p>
+          <h2 className="font-display-lg text-4xl text-black mb-2 select-none">
+            Hire Sirisha!
+          </h2>
+          <p className="font-headline-sm text-xl text-cyan-800 mb-6 italic">
+            Let's build something awesome!
+          </p>
         </div>
 
         <div className="space-y-4 font-body-md text-xl text-gray-800 leading-tight">
           <p>
-            Sirisha Boya is a Senior Full-Stack Developer with <strong>5.7 years of experience</strong> across enterprise healthcare, banking, procurement, and asset systems.
+            Sirisha Boya is a Senior Full-Stack Developer with{" "}
+            <strong>5.7 years of experience</strong> across enterprise
+            healthcare, banking, procurement, and asset systems.
           </p>
 
           <div className="bg-white p-4 border border-dashed border-black rounded space-y-2 font-label-code text-sm text-gray-700">
-            <div>📍 <strong>Availability:</strong> Ready for Full-Time & Contract roles</div>
-            <div>💼 <strong>Key strengths:</strong> React.js, ASP.NET Core, C#, Microservices, Azure SQL, Docker</div>
-            <div>🚀 <strong>Workstyle:</strong> End-to-end owner, collaborative mentor, AI-assisted development</div>
+            <div>
+              📍 <strong>Availability:</strong> Ready for Full-Time & Contract
+              roles
+            </div>
+            <div>
+              💼 <strong>Key strengths:</strong> React.js, ASP.NET Core, C#,
+              Microservices, Azure SQL, Docker
+            </div>
+            <div>
+              🚀 <strong>Workstyle:</strong> End-to-end owner, collaborative
+              mentor, AI-assisted development
+            </div>
           </div>
 
           <div className="pt-4 grid grid-cols-1 sm:grid-cols-2 gap-4 font-headline-sm">
-            <a
-              href="mailto:sirishab9196@gmail.com?subject=Job%20Inquiry%20-%20Full%20Stack%20Developer"
-              className="px-4 py-2.5 bg-black text-white text-center rounded sketchy-border hover:scale-102 active:scale-98 transition-transform cursor-pointer"
+            <button
+              onClick={() => {
+                onClose();
+                window.dispatchEvent(new CustomEvent("open-contact"));
+              }}
+              className="px-4 py-2.5 bg-black text-white text-center rounded sketchy-border hover:scale-102 transition-transform cursor-pointer"
             >
-              Email Sirisha ✉
-            </a>
+              Email Me ✉
+            </button>
 
             <button
               onClick={handleDownloadResume}
@@ -77,7 +101,7 @@ export default function HireMeModal({ isOpen, onClose }: HireMeModalProps) {
 
           <div className="mt-6 text-center border-t border-dashed border-black/15 pt-4">
             <span className="font-label-code text-xs text-gray-500">
-              Direct: +91 9196... / sirishab9196@gmail.com • Hyderabad, India
+              Direct: +919398268492 / sirishab9196@gmail.com • Hyderabad, India
             </span>
           </div>
         </div>
