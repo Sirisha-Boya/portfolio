@@ -4,7 +4,7 @@ A modern interactive portfolio built with React.js, TypeScript, and Vite featuri
 
 ## 🔗 Live Demo
 
-https://portfolio-wheat-rho-93.vercel.app/
+https://portfolio-next-link.vercel.app/
 
 ---
 
